@@ -1,0 +1,49 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  background-color: #1e2d3b;
+}
+
+.cards__row ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  width: 80vw;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.disc {
+  width: calc(100% / 5 - 15px);
+  overflow: hidden;
+}
+
+.disc .img-container {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.disc .img-container img {
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=style.css.map */

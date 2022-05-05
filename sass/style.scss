@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  background-color: $bg-blue;
+}
+
+.cards__row {
+  //   margin: 0 -15px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    width: 80vw;
+    margin: 0 auto;
+    gap: 15px;
+  }
+}
+
+.disc {
+  width: calc(100% / 5 - 15px);
+  overflow: hidden;
+  //   margin: 0 15px;
+
+  .img-container {
+    width: 100%;
+    aspect-ratio: 1;
+    img {
+      width: 100%;
+      //   height: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+}

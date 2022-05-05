@@ -5,19 +5,12 @@ const app = new Vue({
     return {
       // default values
       message: "hello world",
-      dischi: [],
+      discs: [],
     };
   },
-  method: {
-    getData() {
-      axios
-        .get("http://localhost/php-ajax-dischi/data.php")
-        .then((response) => {
-          console.log(response.data);
-        });
-    },
-  },
   mounted() {
-    this.getData();
+    axios.get("http://localhost/php-ajax-dischi/data.php").then((response) => {
+      this.discs = response.data;
+    });
   },
 });
