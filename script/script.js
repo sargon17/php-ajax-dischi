@@ -23,7 +23,6 @@ const app = new Vue({
   },
   methods: {
     getFilteredDiscs(filter, value) {
-      console.log(value);
       let params = {
         filterType: filter,
         filterValue: value,

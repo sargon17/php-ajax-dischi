@@ -31,6 +31,8 @@ body {
 .disc {
   width: calc(100% / 5 - 15px);
   overflow: hidden;
+  background: $bg-clear-blue;
+
   //   margin: 0 15px;
 
   .img-container {
@@ -43,4 +45,11 @@ body {
       object-fit: cover;
     }
   }
+}
+.sub {
+  color: $text-gray;
+  font-size: 10px;
+  font-weight: $subtitle-weight;
+  margin: 0;
+  padding: 0;
 }
