@@ -11,9 +11,35 @@ body {
   color: #fff;
   background-color: $bg-blue;
 }
+header {
+  background-color: $bg-blue;
+  padding: 20px;
+  color: #fff;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: $text-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    background-color: $bg-clear-blue;
+    background-image: none;
+    -webkit-transition: border-color ease-in-out 0.15s,
+      -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  }
+}
 
 .cards__row {
-  //   margin: 0 -15px;
+  margin: 20px auto;
+  width: 80%;
 
   ul {
     display: flex;
@@ -32,6 +58,8 @@ body {
   width: calc(100% / 5 - 15px);
   overflow: hidden;
   background: $bg-clear-blue;
+  border-radius: 4px;
+  overflow: hidden;
 
   //   margin: 0 15px;
 
@@ -45,11 +73,18 @@ body {
       object-fit: cover;
     }
   }
-}
-.sub {
-  color: $text-gray;
-  font-size: 10px;
-  font-weight: $subtitle-weight;
-  margin: 0;
-  padding: 0;
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 6px;
+    padding: 0;
+    line-height: 1.1;
+  }
+  p {
+    color: $text-gray;
+    font-size: 12px;
+    font-weight: $subtitle-weight;
+    margin: 0 6px;
+    padding: 0;
+  }
 }
