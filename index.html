@@ -16,7 +16,13 @@
 
 <body>
     <div id="app">
-        <h1>{{message}}</h1>
+        <header>
+            <label for="genreSelect">Select the genre</label>
+            <select id="genreSelect" @change="getFilteredDiscs('genre', $event.target.value)">
+                <option value="all" selected>Tutti i generi</option>
+                <option v-for="genre in genres" :value="genre">{{genre}}</option>
+            </select>
+        </header>
         <div class="cards__row">
             <ul>
                 <li v-for="(item, index) in discs" class="disc">
@@ -26,6 +32,7 @@
                         </div>
                         <h3>{{item.title}}</h3>
                         <p>{{item.author}}</p>
+                        <p>{{item.genre}}</p>
                         <p>{{item.year}}</p>
                     </div>
                 </li>

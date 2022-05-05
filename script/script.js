@@ -6,11 +6,35 @@ const app = new Vue({
       // default values
       message: "hello world",
       discs: [],
+      genres: [],
     };
   },
   mounted() {
-    axios.get("http://localhost/php-ajax-dischi/data.php").then((response) => {
-      this.discs = response.data;
-    });
+    axios
+      .get("http://localhost/php-ajax-dischi/fullList.php")
+      .then((response) => {
+        this.discs = response.data;
+      });
+    axios
+      .get("http://localhost/php-ajax-dischi/genres.php")
+      .then((response) => {
+        this.genres = response.data;
+      });
+  },
+  methods: {
+    getFilteredDiscs(filter, value) {
+      console.log(value);
+      let params = {
+        filterType: filter,
+        filterValue: value,
+      };
+      axios
+        .get("http://localhost/php-ajax-dischi/filterBy.php", { params })
+        .then((response) => {
+          this.discs = response.data;
+        });
+    },
   },
 });
+
+// "http://localhost/php-ajax-dischi/filterBy.php?filterType=genre%filterValue=Metal"
